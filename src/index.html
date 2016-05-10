@@ -1,262 +1,305 @@
 <html>
 <head>
-    <!-- styles -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
+<!-- styles -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css">
+<link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet" type="text/css">
 
-
-    <!-- js -->
-    <script src="js/jquery-2.2.1.min.js"></script>
-
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/d3.min.js" charset="utf-8"></script>
-    <script src="js/plotly-latest.min.js"></script>
-    <script src="js/main.js"></script>
+<!-- js -->
+<script src="js/jquery-2.2.1.min.js"></script>
+<script src="js/d3.min.js" charset="utf-8"></script>
+<script src="js/plotly-latest.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
 </head>
 <body>
 <div class="wrapper">
-    <div class="patient-info-summary">
-        <div class="patient-photo"></div>
-        <div class="text">
-            <span class="room-info">
-            Room 3
-            </span>
-            <div class="name">
-                Helli N, Female, 61
-            </div>
-            <div class="note">
-                <span class="emph">Allergy:</span>
-                <span class="allergy">Penicillin</span>
-                <span class="allergy">Latex</span>
-            </div>
-        </div>
-        <div class="extra-info">
-            <div><span class="emph">Heart attack:</span> 4/20/2016</div>
-            <div><span class="emph">Triple Bypass:</span> 4/20/2016</div>
-            <div>
-                <span class="prior-incidents">High Blood Pressure</span>
-                <span class="prior-incidents">Diabetes</span>
-
-            </div>
-            <!--<div><span class="emph">Weight:</span> 180 lb</div>-->
-        </div>
-
-        <div class="extra-info">
-            <div><span class="emph">Date of Birth:</span> 03/22/1955</div>
-            <div><span class="emph">Height:</span> 5'8"</div>
-            <div><span class="emph">Weight:</span> 120 lb</div>
-        </div>
-
+  <div class="patient-info-summary">
+    <div class="patient-photo"></div>
+    <div class="text"> <span class="room-info"> Room 3 </span>
+      <div class="name"> Helli N, Female, 61 </div>
+      <div class="note"> <span class="emph">Allergy:</span> <span class="allergy">Penicillin</span> <span class="allergy">Latex</span> </div>
     </div>
-    <div id="charts">
-        <div class="graph" >
-            <div class="graph-artifacts" id="graph1">
-                <span ></span>
-                <span class="graph-name"></span>
-                <span class="graph-photo"></span>
-            </div>
-
-        </div>
-        <div class="graph">
-            <div class="graph-artifacts" id="graph2">
-                <span ></span>
-                <span class="graph-name"></span>
-                <span class="graph-photo"></span>
-            </div>
-        </div>
-        <div class="graph">
-            <div class="graph-artifacts" id="graph3">
-                <span ></span>
-                <span class="graph-name"></span>
-                <span class="graph-photo"></span>
-            </div>
-        </div>
-        <div class="graph">
-            <div class="graph-artifacts" id="graph4">
-                <span ></span>
-                <span class="graph-name"></span>
-                <span class="graph-photo"></span>
-            </div>
-        </div>
-
-        <div class="graph">
-            <div class="graph-artifacts" id="graph5">
-                <span></span>
-                <span class="graph-name"></span>
-                <span class="graph-photo"></span>
-            </div>
-        </div>
+    <div class="extra-info">
+      <div><span class="emph">Heart attack:</span> 4/20/2016</div>
+      <div><span class="emph">Triple Bypass:</span> 4/20/2016</div>
+      <div> <span class="prior-incidents">High Blood Pressure</span> <span class="prior-incidents">Diabetes</span> </div>
+      <!--<div><span class="emph">Weight:</span> 180 lb</div>--> 
     </div>
-    <div id="timeline">
-
+    <div class="extra-info">
+      <div><span class="emph">Date of Birth:</span> 03/22/1955</div>
+      <div><span class="emph">Height:</span> 5'8"</div>
+      <div><span class="emph">Weight:</span> 120 lb</div>
     </div>
-    <div class="tabs">
-        <div class="col-lg-12">
-            <ul class="nav nav-tabs" role="tablist">
-                <li class="nav-item">
-                    <a class="nav-link active" data-toggle="tab" href="#medication" role="tab">Medication</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#labs" role="tab">Labs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#imaging" role="tab">Imaging</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#procedure" role="tab">Procedure</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="tab" href="#notes" role="tab">Notes</a>
-                </li>
-
-            </ul>
+  </div>
+  <div id="charts">
+    <div class="graph" >
+      <div class="graph-artifacts" id="graph1"> <span class="graph-photo"></span> <span class="graph-name"></span> </div>
+    </div>
+    <div class="graph">
+      <div class="graph-artifacts" id="graph2"> <span ></span> <span class="graph-name"></span> <span class="graph-photo"></span> </div>
+    </div>
+    <div class="graph">
+      <div class="graph-artifacts" id="graph3"> <span ></span> <span class="graph-name"></span> <span class="graph-photo"></span> </div>
+    </div>
+    <div class="graph">
+      <div class="graph-artifacts" id="graph4"> <span ></span> <span class="graph-name"></span> <span class="graph-photo"></span> </div>
+    </div>
+    
+    <!--<div class="graph">--> 
+    <!--<div class="graph-artifacts" id="graph5">--> 
+    <!--<span></span>--> 
+    <!--<span class="graph-name"></span>--> 
+    <!--<span class="graph-photo"></span>--> 
+    <!--</div>--> 
+    <!--</div>-->
+    <div id="timeline" class="graph">
+      <div class="graph-artifacts" id="graph5"> <span></span> <span class="graph-name"></span> <span class="graph-photo"></span> </div>
+    </div>
+  </div>
+  <div class="tabs">
+    <div class="col-lg-12">
+      <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#medication" role="tab">Medication</a> </li>
+        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#labs" role="tab">Labs</a> </li>
+        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#imaging" role="tab">Imaging</a> </li>
+        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#procedure" role="tab">Procedure</a> </li>
+        <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#notes" role="tab">Notes</a> </li>
+      </ul>
+    </div>
+  </div>
+  
+  <!-- Tab panes -->
+  <div class="">
+    <div class="tab-content">
+      <div class="tab-pane active" id="medication" role="tabpanel">
+        <div class="input-group adv-search-panel clearfix" id="adv-search-medication">
+          <input type="text" class="form-control" placeholder="Search for medication">
+          <div class="input-group-btn">
+            <div class="btn-group" role="group">
+              <div class="dropdown dropdown-lg">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label for="filter">Filter by</label>
+                      <select class="form-control">
+                        <option value="0" selected="">Time</option>
+                        <option value="1">Date</option>
+                        <option value="2">Attendant</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                  </form>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+            </div>
+          </div>
         </div>
+        <div class="panel-group clearfix" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading medication-collapse" role="tab" id="headingOne">
+              <h4 class="panel-title"> <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> <span class="medication-title-medicine">Tylenol C: </span> <span class="medication-title-dose">600 mg</span> <span class="medication-title-po">PO</span> <span class="medication-title-date">Date: 2/15/16</span> <span class="medication-title-dosagedetails">Doses given: 21:00</span> </a> </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading medication-collapse" role="tab" id="headingTwo">
+              <h4 class="panel-title"> <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"> <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> <span class="medication-title-medicine">Saline So: </span> <span class="medication-title-dose">6 ml</span> <span class="medication-title-po">PO</span> <span class="medication-title-date">Date: 2/15/16</span> <span class="medication-title-dosagedetails">Doses given:1:00, 21:00</span> </a> </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading medication-collapse" role="tab" id="headingThree">
+              <h4 class="panel-title"> <a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree"> <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> <span class="medication-title-medicine">Ampicillin: </span> <span class="medication-title-dose">150mg</span> <span class="medication-title-po">PO</span> <span class="medication-title-date">Date: 2/15/16</span> <span class="medication-title-dosagedetails">Doses given:18:00, 21:00</span> </a> </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="panel-body"> Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS. </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane" id="labs" role="tabpanel">
+       <div style="float:left"> <b> Hematology </b> </div>
+       
+        <div class="labdetails">
+          <div class="labText"> WBC </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width: 35%"> <span style="float:left"> 4.0 </span> <span class="sr-only"></span>  <span style="text-align:center"> <b>5.6 giga/L </b></span> <span style="float:right"> 10 </span>  </div>
+            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%"> <span class="sr-only"></span> </div>
+            <div class="progress-bar progress-bar-danger" style="width: 10%"> <span class="sr-only"></span></div>
+          </div>
+        </div>
+        <div class="labdetails">
+          <div class="labText"> RBC </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width: 35%"> <span style="float:left"> 3.80 </span> <span class="sr-only"></span>  <span style="text-align:center"> <b>4.51 tera/L </b></span> <span style="float:right"> 4.80 </span> </div>
+            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%"> <span class="sr-only"></span> </div>
+            <div class="progress-bar progress-bar-danger" style="width: 10%"> <span class="sr-only"></span></div>
+          </div>
+        </div>
+        <div class="labdetails">
+          <div class="labText"> HB </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width: 35%"> <span style="float:left"> 120 </span> <span class="sr-only"></span>  <span style="text-align:center"> <b>146 g/L </b></span> <span style="float:right"> 150 </span> </div>
+            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%"> <span class="sr-only"></span> </div>
+            <div class="progress-bar progress-bar-danger" style="width: 10%"> <span class="sr-only"></span></div>
+          </div>
+        </div>
+        <div class="labdetails">
+          <div class="labText"> Hematocrit </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width: 35%"> <span style="float:left"> 0.35 </span> <span class="sr-only"></span>   <span style="float:right"> 0.43 </span> </div>
+            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%"> <span class="sr-only"><span style="text-align:center"> <b>A 0.44 </b></span></span> </div>
+            <div class="progress-bar progress-bar-danger" style="width: 10%"> <span class="sr-only"></span></div>
+          </div>
+        </div>
+        <div class="labdetails">
+          <div class="labText"> MCV </div>
+          <div class="progress">
+            <div class="progress-bar progress-bar-success" style="width: 35%"> <span style="float:left"> 82 </span> <span class="sr-only"></span> <span style="text-align:center"> <b>97 fl </b></span>  <span style="float:right"> 98 </span> </div>
+            <div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%"> <span class="sr-only"></span> </div>
+            <div class="progress-bar progress-bar-danger" style="width: 10%"> <span class="sr-only"></span></div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="tab-pane" id="imaging" role="tabpanel">
+        <div class="input-group adv-search-panel clearfix" id="adv-search-imaging">
+          <input type="text" class="form-control" placeholder="Search for Imaging">
+          <div class="input-group-btn">
+            <div class="btn-group" role="group">
+              <div class="dropdown dropdown-lg">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label for="filter">Filter by</label>
+                      <select class="form-control">
+                        <option value="0" selected="">All</option>
+                        <option value="1">MRI</option>
+                        <option value="2">X-Ray</option>
+                        <option value="3">CAT</option>
+                        <option value="2">Ultrasound</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                  </form>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div id="main_area"> 
+            <!-- Slider -->
+            <div class="row">
+              <div class="col-xs-12" id="slider"> 
+                <!-- Top part of the slider -->
+                <div class="row">
+                  <div class="col-sm-8" id="carousel-bounding-box">
+                    <div class="carousel slide" id="imagingCarousel"> 
+                      <!-- Carousel items -->
+                      <div class="carousel-inner">
+                        <div class="active item" data-slide-number="0"> <img src="images/x-ray1.jpg"></div>
+                        <div class="item" data-slide-number="1"> <img src="images/x-ray2.jpg"></div>
+                        <div class="item" data-slide-number="2"> <img src="images/x-ray3.jpg"></div>
+                        <div class="item" data-slide-number="3"> <img src="images/x-ray4.jpg"></div>
+                      </div>
+                      <!-- Carousel nav --> 
+                      <a class="left carousel-control" href="#imagingCarousel" role="button" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a> <a class="right carousel-control" href="#imagingCarousel" role="button" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a> </div>
+                  </div>
+                  <div class="col-sm-4" id="carousel-text"></div>
+                  <div id="slide-content" style="display: none;">
+                    <div id="slide-content-0">
+                      <h4>X-Ray</h4>
+                      <h5>Time: 12:30pm</h5>
+                      <h5>Date: April 12th 2016</h5>
+                      <h5>Location: Chest</h5>
+                      <p>Notes: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    </div>
+                    <div id="slide-content-1">
+                      <h4>X-Ray</h4>
+                      <h5>Time: 12:30pm</h5>
+                      <h5>Date: April 12th 2016</h5>
+                      <h5>Location: Chest</h5>
+                      <p>Notes: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    </div>
+                    <div id="slide-content-2">
+                      <h4>X-Ray</h4>
+                      <h5>Time: 12:30pm</h5>
+                      <h5>Date: April 12th 2016</h5>
+                      <h5>Location: Chest</h5>
+                      <p>Notes: Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    </div>
+                    <div id="slide-content-3">
+                      <h4>X-Ray</h4>
+                      <h5>Time: 12:30pm</h5>
+                      <h5>Date: April 12th 2016</h5>
+                      <h5>Location: Chest</h5>
+                      <p>Notes:Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/Slider-->
+            
+            <div class="row hidden-xs" id="slider-thumbs"> 
+              <!-- Bottom switcher of slider -->
+              <ul class="hide-bullets">
+                <li class="col-sm-2"> <a class="thumbnail" id="carousel-selector-0"><img src="images/x-ray1_5x5.jpg"></a> </li>
+                <li class="col-sm-2"> <a class="thumbnail" id="carousel-selector-1"><img src="images/x-ray2_5x5.jpg"></a> </li>
+                <li class="col-sm-2"> <a class="thumbnail" id="carousel-selector-2"><img src="images/x-ray3_5x5.jpg"></a> </li>
+                <li class="col-sm-2"> <a class="thumbnail" id="carousel-selector-3"><img src="images/x-ray4_5x5.jpg"></a> </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- /container --> 
+      </div>
+      <div class="tab-pane" id="procedure" role="tabpanel"> </div>
+      <div class="tab-pane" id="notes" role="tabpanel">
+        <div class="input-group adv-search-panel clearfix" id="adv-search-notes">
+          <input type="text" class="form-control" placeholder="Search for notes">
+          <div class="input-group-btn">
+            <div class="btn-group" role="group">
+              <div class="dropdown dropdown-lg">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                <div class="dropdown-menu dropdown-menu-right" role="menu">
+                  <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                      <label for="filter">Filter by</label>
+                      <select class="form-control">
+                        <option value="0" selected="">Time</option>
+                        <option value="1">Date</option>
+                        <option value="2">Attendant</option>
+                      </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                  </form>
+                </div>
+              </div>
+              <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel-default clearfix notes-panel-body">
+          <div class="panel-body"> <b> 2:05 AM 04/12/2016     RN Nancy: </b> Lorem ipsum dolor sit amet, ad has molestiae disputando, justo congue patrioque eum id. Te dolorem definiebas reprimique cum, eu clita impedit accusamus cum. Pri natum postulant et. Hendrerit definiebas sed in. </div>
+          <div class="panel-body"> <b> 11:05 AM 04/12/2016     RN Nancy: </b> Lorem ipsum dolor sit amet, ad has molestiae disputando, justo congue patrioque eum id. Te dolorem definiebas reprimique cum, eu clita impedit accusamus cum. Pri natum postulant et. Hendrerit definiebas sed in. </div>
+          <div class="panel-body"> <b> 4:05 PM 04/11/2016     RN Nancy: </b> Lorem ipsum dolor sit amet, ad has molestiae disputando, justo congue patrioque eum id. Te dolorem definiebas reprimique cum, eu clita impedit accusamus cum. Pri natum postulant et. Hendrerit definiebas sed in. </div>
+          <div class="panel-body"> <b> 11:05 AM 04/11/2016     RN Nancy: </b> Lorem ipsum dolor sit amet, ad has molestiae disputando, justo congue patrioque eum id. Te dolorem definiebas reprimique cum, eu clita impedit accusamus cum. Pri natum postulant et. Hendrerit definiebas sed in. </div>
+          <div class="panel-body"> <b> 4:05 PM 04/10/2016     RN Nancy: </b> Lorem ipsum dolor sit amet, ad has molestiae disputando, justo congue patrioque eum id. Te dolorem definiebas reprimique cum, eu clita impedit accusamus cum. Pri natum postulant et. Hendrerit definiebas sed in. </div>
+        </div>
+      </div>
     </div>
-
-
-    <div class="col-lg-8">
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div class="tab-pane active" id="medication" role="tabpanel">
-			
-				<div class="input-group adv-search-panel clearfix" id="adv-search">
-					<input type="text" class="form-control" placeholder="Search for medication">
-					<div class="input-group-btn">
-						<div class="btn-group" role="group">
-							<div class="dropdown dropdown-lg">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-								<div class="dropdown-menu dropdown-menu-right" role="menu">
-									<form class="form-horizontal" role="form">
-									  <div class="form-group">
-										<label for="filter">Filter by</label>
-										<select class="form-control">
-											<option value="0" selected="">Time</option>
-											<option value="1">Date</option>
-											<option value="2">Attendant</option>
-										</select>
-									  </div>
-									  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-									</form>
-								</div>
-							</div>
-							<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-						</div>
-					</div>
-				</div>
-			
-				<div class="panel-group clearfix" id="accordion" role="tablist" aria-multiselectable="true">
-				  <div class="panel panel-default">
-					<div class="panel-heading medication-collapse" role="tab" id="headingOne">
-					  <h4 class="panel-title">
-						<a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-							<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-							<span class="medication-title-medicine">Tylenol C: </span>
-							<span class="medication-title-dose">600 mg</span> <span class="medication-title-po">PO</span> <span class="medication-title-date">Date: 2/15/16</span> <span class="medication-title-dosagedetails">Doses given: 21:00</span>
-						</a>
-					  </h4>
-					</div>
-					<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
-					  <div class="panel-body">
-						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					  </div>
-					</div>
-				  </div>
-				  <div class="panel panel-default">
-					<div class="panel-heading medication-collapse" role="tab" id="headingThree">
-					  <h4 class="panel-title">
-						<a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-							<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-							<span class="medication-title-medicine">Saline So: </span>
-							<span class="medication-title-dose">6 ml</span> <span class="medication-title-po">PO</span> <span class="medication-title-date">Date: 2/15/16</span> <span class="medication-title-dosagedetails">Doses given:1:00, 21:00</span>
-						</a>
-					  </h4>
-					</div>
-					<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-					  <div class="panel-body">
-						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					  </div>
-					</div>
-				  </div>
-				  <div class="panel panel-default">
-					<div class="panel-heading medication-collapse" role="tab" id="headingFive">
-					  <h4 class="panel-title">
-						<a class="accordion-toggle" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-							<span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
-							<span class="medication-title-medicine">Ampicillin: </span>
-							<span class="medication-title-dose">150mg</span> <span class="medication-title-po">PO</span> <span class="medication-title-date">Date: 2/15/16</span> <span class="medication-title-dosagedetails">Doses given:18:00, 21:00</span>
-						</a>
-					  </h4>
-					</div>
-					<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-					  <div class="panel-body">
-						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-					  </div>
-					</div>
-				  </div>
-				</div>
-            </div>
-            <div class="tab-pane" id="labs" role="tabpanel">
-
-            </div>
-            <div class="tab-pane" id="imaging" role="tabpanel">
-
-            </div>
-            <div class="tab-pane" id="procedure" role="tabpanel">
-
-            </div>
-			<div class="tab-pane" id="notes" role="tabpanel">
-				<div class="input-group adv-search-panel clearfix" id="adv-search-notes">
-					<input type="text" class="form-control" placeholder="Search for notes">
-					<div class="input-group-btn">
-						<div class="btn-group" role="group">
-							<div class="dropdown dropdown-lg">
-								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
-								<div class="dropdown-menu dropdown-menu-right" role="menu">
-									<form class="form-horizontal" role="form">
-									  <div class="form-group">
-										<label for="filter">Filter by</label>
-										<select class="form-control">
-											<option value="0" selected="">Time</option>
-											<option value="1">Date</option>
-											<option value="2">Attendant</option>
-										</select>
-									  </div>
-									  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-									</form>
-								</div>
-							</div>
-							<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-						</div>
-					</div>
-				</div>
-				
-				<div class="panel panel-default clearfix notes-panel-body">
-					<div class="panel-body">
-						<b> 2:05 AM 04/12/2016     RN Nancy: </b>
-						Lorem ipsum dolor sit amet, ad has molestiae disputando, justo congue patrioque eum id. Te dolorem definiebas reprimique cum, eu clita impedit accusamus cum. Pri natum postulant et. Hendrerit definiebas sed in.
-					</div>
-					<div class="panel-body">
-						<b> 11:05 AM 04/12/2016     RN Nancy: </b>
-						Lorem ipsum dolor sit amet, ad has molestiae disputando, justo congue patrioque eum id. Te dolorem definiebas reprimique cum, eu clita impedit accusamus cum. Pri natum postulant et. Hendrerit definiebas sed in.
-					</div>
-					<div class="panel-body">
-						<b> 4:05 PM 04/11/2016     RN Nancy: </b>
-						Lorem ipsum dolor sit amet, ad has molestiae disputando, justo congue patrioque eum id. Te dolorem definiebas reprimique cum, eu clita impedit accusamus cum. Pri natum postulant et. Hendrerit definiebas sed in.
-					</div>
-					<div class="panel-body">
-						<b> 11:05 AM 04/11/2016     RN Nancy: </b>
-						Lorem ipsum dolor sit amet, ad has molestiae disputando, justo congue patrioque eum id. Te dolorem definiebas reprimique cum, eu clita impedit accusamus cum. Pri natum postulant et. Hendrerit definiebas sed in.
-					</div>
-					<div class="panel-body">
-						<b> 4:05 PM 04/10/2016     RN Nancy: </b>
-						Lorem ipsum dolor sit amet, ad has molestiae disputando, justo congue patrioque eum id. Te dolorem definiebas reprimique cum, eu clita impedit accusamus cum. Pri natum postulant et. Hendrerit definiebas sed in.
-					</div>
-				</div>
-			</div>
-		</div>
-    </div>
+  </div>
 </div>
-
 </body>
 </html>
